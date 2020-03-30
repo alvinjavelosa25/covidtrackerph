@@ -10,12 +10,14 @@ import {
   MatButtonModule,
   MatToolbarModule,
 } from '@angular/material';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
