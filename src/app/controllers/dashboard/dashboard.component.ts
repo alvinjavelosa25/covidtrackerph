@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { TrackerService } from 'src/app/services/tracker.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +10,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 export class DashboardComponent implements OnInit {
 
+  byCities: any;
+
   constructor(
-  ) {
+    public trackerService: TrackerService
+  ) { }
 
-  }
-
-  ngOnInit() {
-
+  async ngOnInit() {
+    this.byCities = await this.trackerService.getCity().subscribe(response => {
+      return response;
+    });
   }
 
 

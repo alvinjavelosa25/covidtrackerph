@@ -11,6 +11,10 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 import { HeaderComponent } from './components/header/header.component';
+import { UploaderComponent } from './controllers/dashboard/uploader/uploader.component';
+import { AboutComponent } from './controllers/dashboard/about/about.component';
+import { HealthComponent } from './controllers/dashboard/health/health.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +22,9 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     DashboardComponent,
     HeaderComponent,
+    UploaderComponent,
+    AboutComponent,
+    HealthComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +33,7 @@ import { HeaderComponent } from './components/header/header.component';
     MatMenuModule,
     MatButtonModule,
     MatToolbarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

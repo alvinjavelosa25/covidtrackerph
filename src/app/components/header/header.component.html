@@ -6,14 +6,15 @@
 
   <button mat-button [matMenuTriggerFor]="aboveMenu">Summary</button>
   <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button mat-menu-item (click)="redirectTo('dashboard')">Overall</button>
     <button mat-menu-item>Confirmed</button>
-    <button mat-menu-item>UI</button>
-    <button mat-menu-item>UM</button>
+    <button mat-menu-item>Under Investigation</button>
+    <button mat-menu-item>Under Monitoring</button>
     <button mat-menu-item>Recovered</button>
     <button mat-menu-item>Deaths</button>
   </mat-menu>
-  <button mat-button>Upload File</button>
-  <button mat-button>Health Check</button>
-  <button mat-button>About Us</button>
+  <button mat-button (click)="redirectTo('uploadform')">Upload File</button>
+  <button mat-button (click)="redirectTo('self_assessment')">Health Check</button>
+  <button mat-button (click)="redirectTo('about')">About Us</button>
 
 </mat-toolbar>
